@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>MasterFrame — Photography Course</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z" />
+                </svg>
+                MasterFrame
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#features" data-key="features">Features</a>
+                <a href="#curriculum" data-key="curriculum">Curriculum</a>
+                <a href="#instructor" data-key="instructor">Instructor</a>
+                <a href="#pricing" data-key="pricing">Pricing</a>
+            </div>
+            <div class="nav-controls">
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+                    <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" style="display:none">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                    </svg>
+                    <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
+                </button>
+                <button class="icon-btn lang-btn" id="langToggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+                    </svg>
+                    <span id="langLabel">AR</span>
+                </button>
+                <button class="enroll-btn" data-key="enrollNow" onclick="scrollTo('#pricing')">Enroll Now</button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#features" data-key="features" onclick="closeMobile()">Features</a>
+        <a href="#curriculum" data-key="curriculum" onclick="closeMobile()">Curriculum</a>
+        <a href="#instructor" data-key="instructor" onclick="closeMobile()">Instructor</a>
+        <a href="#pricing" data-key="pricing" onclick="closeMobile()">Pricing</a>
+        <button class="enroll-btn" data-key="enrollNow" onclick="closeMobile()">Enroll Now</button>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="anim-fadeup" style="animation-delay:.1s">
+                <div class="hero-badge" data-key="heroBadge">🎓 Next cohort starts June 1, 2026</div>
+                <h1 class="hero-title" data-key="heroTitle">Master Professional Photography</h1>
+                <p class="hero-subtitle" data-key="heroSubtitle">Transform your passion into expertise. Learn from
+                    award-winning photographers and master the art of capturing extraordinary moments.</p>
+                <div class="hero-actions">
+                    <button class="btn-primary" data-key="primaryCta">Start Learning Today</button>
+                    <button class="btn-secondary" data-key="secondaryCta">Watch Preview</button>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <div class="hero-stat-num">5,000+</div>
+                        <div class="hero-stat-label" data-key="statStudents">Students Enrolled</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-num">4.9/5</div>
+                        <div class="hero-stat-label" data-key="statRating">Average Rating</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-num" data-key="statWeeks">12 Weeks</div>
+                        <div class="hero-stat-label" data-key="statDuration">Duration</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-img-wrap anim-scalein" style="animation-delay:.25s">
+                <img class="hero-img"
+                    src="https://images.unsplash.com/photo-1745847768366-d44dcef9ef35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=900&q=80"
+                    alt="Professional photographer at work" />
+                <div class="hero-badge-card">
+                    <div class="badge-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="badge-card-title" data-key="certified">Certified Course</div>
+                        <div class="badge-card-sub" data-key="recognized">Industry Recognized</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="features-bg">
+        <div class="section-inner">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title" data-key="featuresTitle">Why Choose MasterFrame</h2>
+                <p class="section-subtitle" data-key="featuresSubtitle">Everything you need to become a professional
+                    photographer</p>
+            </div>
+            <div class="features-grid" id="featuresGrid"></div>
+        </div>
+    </section>
+
+    <!-- CURRICULUM -->
+    <section id="curriculum">
+        <div class="section-inner">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title" data-key="curriculumTitle">Course Curriculum</h2>
+                <p class="section-subtitle" data-key="curriculumSubtitle">A structured 12-week journey from fundamentals
+                    to mastery</p>
+            </div>
+            <div class="curriculum-grid" id="curriculumGrid"></div>
+        </div>
+    </section>
+
+    <!-- INSTRUCTOR -->
+    <section id="instructor" class="instructor-bg">
+        <div class="section-inner">
+            <div class="instructor-grid" data-reveal>
+                <div>
+                    <img class="instructor-img"
+                        src="https://images.unsplash.com/photo-1643264623879-bb85ea39c62a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80"
+                        alt="Alex Rivera" />
+                </div>
+                <div>
+                    <div class="instructor-eyebrow" data-key="instructorEyebrow">Meet Your Instructor</div>
+                    <h2 class="instructor-name" data-key="instructorName">Alex Rivera</h2>
+                    <p class="instructor-role" data-key="instructorRole">Award-Winning Professional Photographer</p>
+                    <p class="instructor-bio" data-key="instructorBio">With over 20 years of experience and work
+                        featured in National Geographic, Time Magazine, and countless exhibitions worldwide, Alex has
+                        mentored thousands of photographers in mastering their craft.</p>
+                    <div class="achievements" id="achievements"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+        <div class="section-inner">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title" data-key="testimonialsTitle">What Students Say</h2>
+                <p class="section-subtitle" data-key="testimonialsSubtitle">Join thousands of satisfied photographers
+                </p>
+            </div>
+            <div class="testimonials-grid" id="testimonialsGrid"></div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="pricing-bg">
+        <div class="section-inner">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title" data-key="pricingTitle">Choose Your Plan</h2>
+                <p class="section-subtitle" data-key="pricingSubtitle">Flexible pricing to match your learning style</p>
+            </div>
+            <div class="pricing-grid" id="pricingGrid"></div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="section-inner">
+            <div class="section-header" data-reveal>
+                <h2 class="section-title" data-key="faqTitle">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list" id="faqList"></div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div data-reveal>
+            <h2 class="section-title" data-key="ctaTitle">Ready to Start Your Photography Journey?</h2>
+            <p class="section-subtitle" data-key="ctaSubtitle">Join 5,000+ photographers who have transformed their
+                passion into expertise</p>
+            <button class="cta-btn" data-key="ctaBtn">Enroll Now — Next Cohort June 1</button>
+            <p class="cta-guarantee" data-key="ctaGuarantee">30-day money-back guarantee • Lifetime access</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z" />
+                        </svg>
+                        MasterFrame
+                    </div>
+                    <p class="footer-tagline" data-key="footerTagline">Empowering photographers to capture the
+                        extraordinary</p>
+                </div>
+                <div>
+                    <div class="footer-heading" data-key="footerCourse">Course</div>
+                    <ul class="footer-links">
+                        <li><a href="#curriculum" data-key="curriculum">Curriculum</a></li>
+                        <li><a href="#instructor" data-key="instructor">Instructor</a></li>
+                        <li><a href="#pricing" data-key="pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-heading" data-key="footerCompany">Company</div>
+                    <ul class="footer-links">
+                        <li><a href="#" data-key="footerAbout">About</a></li>
+                        <li><a href="#" data-key="footerBlog">Blog</a></li>
+                        <li><a href="#" data-key="footerContact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-heading" data-key="footerLegal">Legal</div>
+                    <ul class="footer-links">
+                        <li><a href="#" data-key="footerPrivacy">Privacy</a></li>
+                        <li><a href="#" data-key="footerTerms">Terms</a></li>
+                        <li><a href="#" data-key="footerRefund">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom" data-key="copyright">© 2026 MasterFrame. All rights reserved.</div>
+        </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
